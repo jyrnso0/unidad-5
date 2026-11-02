@@ -15,12 +15,11 @@ CONTENIDO DEL PAQUETE
  tests/test_pia_rules.py: Casos del PIA CP-01 a CP-09 y CP-12; CP-10 y CP-11 se prueban en repository y service.
  datos/matriz_casos_prueba.csv: Matriz estandarizada de 12 casos (5 exitos, 4 errores y 3 limites).
  datos/pedidos_muestra.csv: Fixtures de prueba con pedidos de muestra para persistencia y validacion.
- evidencias/capturas/: Ilustraciones conceptuales E1-E6, capturas reales E7-E8 e informe HTML de cobertura.
+ evidencias/capturas/: Capturas de pantalla completa para las evidencias E1-E9 y reporte HTML de cobertura.
  .github/workflows/ci.yml: Pipeline de Integracion Continua (CI Business Logic) para GitHub Actions.
  requirements.txt: Lista de dependencias aisladas (pytest, pytest-cov, SQLAlchemy, ruff).
  .gitignore: Exclusion de entornos virtuales, caches (__pycache__, .pytest_cache) y reportes de cobertura.
  verificar_laboratorio.py: Script utilitario de autodiagnostico y verificacion integral en un solo paso.
- INSTRUCCIONES_AGY.md: Guia detallada de ejecucion paso a paso para el asistente Antigravity o el alumno.
 
 PASO A PASO DE USO
  1. Preparacion del entorno:
@@ -50,7 +49,8 @@ PASO A PASO DE USO
     Ejecuta python -m pytest -v para verificar todos los casos automatizados y los 12 de
     datos/matriz_casos_prueba.csv (5 exitos, 4 errores y 3 limites), persistencia y mocks.
  10. Evidencias:
-     Contiene el registro E1-E9 y las capturas verificables E7-E8.
+     Las capturas E1-E9 están en evidencias/capturas/. El reporte HTML de cobertura se genera
+     en evidencias/capturas/cobertura/index.html al ejecutar el comando del Paso 7.
 
 REGLAS DIDACTICAS
  - Un pedido SHIPPED nunca se cancela, ni siquiera por el rol administrador.

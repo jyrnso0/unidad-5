@@ -16,7 +16,8 @@ Manual y paquete de trabajo para el desarrollo, prueba automatizada y aseguramie
 │   ├── matriz_casos_prueba.csv  # Matriz de 12 casos de prueba para el PIA
 │   └── pedidos_muestra.csv      # Fixtures de datos de prueba
 ├── evidencias/
-│   └── capturas/                # Capturas y reporte HTML de cobertura
+│   ├── capturas/                # Capturas y reporte HTML de cobertura
+│   └── Reporte_U5.pdf           # Reporte de documentación
 ├── src/
 │   ├── __init__.py
 │   ├── domain.py                # Reglas de negocio de pedidos (Order)
