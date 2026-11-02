@@ -214,13 +214,21 @@ Alcanzar un 96.19% de cobertura (superando holgadamente el 80% requerido por la 
 
 ---
 
-### Evidencia E8 · Pipeline CI en GitHub Actions (pendiente de ejecución real)
+### Evidencia E8 · Pipeline CI en GitHub Actions
 > **Objetivo:** Asegurar integración continua rechazando cambios defectuosos y aprobando código válido.
 
 - **URL del Repositorio:** https://github.com/jyrnso0/unidad-5
 - **Workflow:** `.github/workflows/ci.yml` (CI Business Logic)
 
-La URL del repositorio del equipo ya está registrada. Aún no se incluyen capturas ni resultados de GitHub Actions, por lo que las ejecuciones (una exitosa, un fallo controlado en una rama de prueba y la recuperación) siguen pendientes de documentar con evidencia auténtica.
+- **Ejecución verde inicial:** [GitHub Actions #1](https://github.com/jyrnso0/unidad-5/actions/runs/41381459145)
+- **Fallo controlado:** [GitHub Actions #3](https://github.com/jyrnso0/unidad-5/actions/runs/41381712671), provocado temporalmente en la rama `ci/controlled-failure`. Pytest detectó 1 fallo intencional y 27 pruebas aprobadas; Ruff pasó.
+- **Recuperación:** [GitHub Actions #4](https://github.com/jyrnso0/unidad-5/actions/runs/41381791186), después de retirar la prueba temporal; el pipeline volvió a verde.
+
+La rama de demostración no modifica `main` y el test fallido fue eliminado tras validar el comportamiento del CI.
+
+![E8 - Pipeline CI verde](capturas/e8_ci_verde.png)
+![E8 - Fallo controlado detectado por CI](capturas/e8_ci_rojo.png)
+![E8 - Pipeline CI recuperado](capturas/e8_ci_recuperacion.png)
 
 ---
 

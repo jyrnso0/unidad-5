@@ -28,6 +28,7 @@ BODY_COLOR = RGBColor(0x22, 0x22, 0x22)
 IMAGE_PATTERN = re.compile(r"!\[(.*?)\]\((.*?)\)")
 INLINE_PATTERN = re.compile(r"(\*\*.+?\*\*|`.+?`|\*.+?\*)")
 TABLE_SEPARATOR = re.compile(r"\|?[\s:|-]+\|?")
+EXPECTED_IMAGE_COUNT = 12
 
 
 def element_text(element):
@@ -458,8 +459,11 @@ def render_content(document):
             index += 1
         add_body_paragraph(document, " ".join(paragraph_lines))
 
-    if images_added != 9:
-        raise ValueError(f"Se esperaban 9 imágenes de evidencias E1-E9 y se encontraron {images_added}.")
+    if images_added != EXPECTED_IMAGE_COUNT:
+        raise ValueError(
+            f"Se esperaban {EXPECTED_IMAGE_COUNT} imágenes de evidencias E1-E9 "
+            f"y se encontraron {images_added}."
+        )
     if tables_added != 3:
         raise ValueError(f"Se esperaban 3 tablas de evidencias y se encontraron {tables_added}.")
     return images_added, tables_added

@@ -46,14 +46,16 @@ PASO A PASO DE USO
     python -m pytest -v --cov=src --cov-report=term-missing --cov-report=html:evidencias/capturas/cobertura --cov-fail-under=80
  8. GitHub Actions CI (Paso 8):
     Repositorio: https://github.com/jyrnso0/unidad-5. El workflow se ejecuta en cada push.
-    Consulta Actions para verificar los resultados reales de CI.
+    Ejecucion verde: https://github.com/jyrnso0/unidad-5/actions/runs/41381459145
+    Fallo controlado: https://github.com/jyrnso0/unidad-5/actions/runs/41381712671
+    Recuperacion verde: https://github.com/jyrnso0/unidad-5/actions/runs/41381791186
  9. Reglas del PIA (Paso 9):
     Ejecuta python -m pytest -v para verificar todos los casos automatizados y los 12 de
     datos/matriz_casos_prueba.csv (5 exitos, 4 errores y 3 limites), persistencia y mocks.
  10. Completar evidencias:
     Registra capturas y explicaciones en evidencias/EVIDENCIAS_GUIA_PLANTILLA.md.
  11. Generar el reporte completo con el diseño ACT-F04:
-     Ejecuta python generar_docx_reporte.py. Combina E1-E9 y sus 9 imagenes (7 ilustrativas y 2 capturas reales de E7) con los logotipos,
+     Ejecuta python generar_docx_reporte.py. Combina E1-E9 y sus 12 imagenes (7 ilustrativas y 5 capturas reales de E7 y E8) con los logotipos,
      encabezado, pie, márgenes y estilos de la plantilla; conserva los nombres y matrículas
      originales y no agrega una portada de identificación duplicada. El archivo se guarda en
      evidencias/Reporte_Evidencias_U5.docx.
