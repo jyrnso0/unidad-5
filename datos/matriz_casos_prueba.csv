@@ -1,0 +1,13 @@
+id,regla,entrada,resultado_esperado,tipo,funcion_test,estado
+CP-01,Control de Stock,Stock=0 cantidad=1,Rechazo por falta de stock (BusinessRuleViolation),Limite,test_cp01_stock_cero_rechazo,PASSED
+CP-02,Control de Stock,Stock=5 cantidad=2,Stock restante=3 reserva exitosa,Exito,test_cp02_stock_suficiente_reserva,PASSED
+CP-03,Control de Stock,Cantidad=-1,Excepcion cantidad invalida (BusinessRuleViolation),Error,test_cp03_cantidad_invalida,PASSED
+CP-04,Limite de Unidades,15 unidades en pedido,Pedido aceptado dentro del limite,Exito,test_cp04_unidades_dentro_limite,PASSED
+CP-05,Limite de Unidades,20 unidades exactas,Pedido aceptado en umbral maximo,Limite,test_cp05_limite_exacto_20_unidades,PASSED
+CP-06,Limite de Unidades,21 unidades acumuladas,Rechazo por exceder maximo de 20 unidades,Error,test_cp06_exceso_unidades_rechazo,PASSED
+CP-07,Descuento por Volumen,Total $6000 sin promocion,Descuento 5% aplicado ($5700.0),Exito,test_cp07_descuento_volumen_aplicado,PASSED
+CP-08,Descuento por Volumen,Total $5000 exacto,Sin descuento ($5000.0 umbral estricto >5000),Limite,test_cp08_umbral_limite_sin_descuento,PASSED
+CP-09,Descuento por Volumen,Total $6000 con promocion activa,Promocion bloquea descuento por volumen,Error,test_cp09_promocion_activa_bloquea_descuento,PASSED
+CP-10,Persistencia Transaccional,Pedido total=250 id=2 commit,Registro persistido en base SQLite,Integracion/Exito,test_repository_save_order_250_commit,PASSED
+CP-11,Rechazo de Pago Mock,Pasarela rechaza cobro VIP 200,Cobro 170 y RuntimeError lanzado,Error/Mock,test_payment_rejected_vip_order,PASSED
+CP-12,Notificacion de Pedido Mock,Pedido con subtotal 6000 sin promocion,Confirma pedido y notifica el total con descuento de 5700,Exito/Mock,test_cp12_mock_notificacion_confirma_descuento_volumen,PASSED
