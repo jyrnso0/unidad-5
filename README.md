@@ -32,7 +32,6 @@ Manual y paquete de trabajo para el desarrollo, prueba automatizada y aseguramie
 │   ├── test_service.py          # Pruebas con Mocks de pasarela externa
 │   ├── test_security.py         # Pruebas de seguridad y ventana de tiempo
 │   └── test_pia_rules.py        # Casos del PIA CP-01 a CP-09 y CP-12
-├── INSTRUCCIONES_AGY.md         # Hoja de ruta para ejecución por Antigravity / Alumno
 ├── README.txt                   # Manual rápido en texto plano
 ├── README.md                    # Documentación principal del repositorio
 ├── requirements.txt             # Dependencias del proyecto
