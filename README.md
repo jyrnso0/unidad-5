@@ -85,7 +85,7 @@ El reporte HTML verificable se generará en `evidencias/capturas/cobertura/index
 ```powershell
 python generar_docx_reporte.py
 ```
-El documento combina el contenido E1-E9 de `evidencias/EVIDENCIAS_GUIA_PLANTILLA.md` y sus 12 imágenes con la identidad visual de `evidencias/ACT-F04-EQUIPO8_PLANTILLA.docx` (logotipos, encabezado, pie, márgenes y estilos). Siete imágenes son ilustraciones de E1-E6; cinco son capturas reales de cobertura y de las ejecuciones E8 en GitHub Actions. Conserva los nombres y matrículas originales de la plantilla y no agrega una portada de identificación duplicada. El resultado se guarda como `evidencias/Reporte_Evidencias_U5.docx`; si ese archivo está abierto en Word, se crea `evidencias/Reporte_Evidencias_U5_Formato_ACT-F04.docx`. El repositorio del equipo es https://github.com/jyrnso0/unidad-5. El workflow se ejecuta en cada push y pull request a `main`/`master`.
+El documento combina el contenido E1-E9 de `evidencias/EVIDENCIAS_GUIA_PLANTILLA.md` y sus 12 imágenes con la identidad visual de `evidencias/ACT-F04-EQUIPO8_PLANTILLA.docx` (logotipos, encabezado, pie, márgenes y estilos). Las imágenes E1-E6 son ilustraciones conceptuales; E7-E8 incluyen capturas reales de cobertura y de las ejecuciones de GitHub Actions. Conserva los nombres y matrículas originales de la plantilla y no agrega una portada de identificación duplicada. El resultado se guarda como `evidencias/Reporte_Evidencias_U5.docx`; si ese archivo está abierto en Word, se crea `evidencias/Reporte_Evidencias_U5_Formato_ACT-F04.docx`. El repositorio del equipo es https://github.com/jyrnso0/unidad-5. El workflow se ejecuta en cada push y pull request a `main`/`master`.
 
 ---
 

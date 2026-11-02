@@ -18,7 +18,7 @@ CONTENIDO DEL PAQUETE
  evidencias/EVIDENCIAS_GUIA_PLANTILLA.md: Plantilla exhaustiva para documentar las evidencias E1 a E9 y reflexion final.
  evidencias/ACT-F04-EQUIPO8_PLANTILLA.docx: Plantilla Word de diseño (logotipos, encabezado, pie y márgenes).
  generar_docx_reporte.py: Combina la guía de evidencias U5 y sus capturas con el diseño ACT-F04.
- evidencias/capturas/: Ilustraciones, capturas reales de cobertura e informe HTML; E8 de GitHub Actions sigue pendiente.
+ evidencias/capturas/: Ilustraciones conceptuales E1-E6, capturas reales E7-E8 e informe HTML de cobertura.
  .github/workflows/ci.yml: Pipeline de Integracion Continua (CI Business Logic) para GitHub Actions.
  requirements.txt: Lista de dependencias aisladas (pytest, pytest-cov, SQLAlchemy, ruff).
  .gitignore: Exclusion de entornos virtuales, caches (__pycache__, .pytest_cache) y reportes de cobertura.
@@ -52,8 +52,8 @@ PASO A PASO DE USO
  9. Reglas del PIA (Paso 9):
     Ejecuta python -m pytest -v para verificar todos los casos automatizados y los 12 de
     datos/matriz_casos_prueba.csv (5 exitos, 4 errores y 3 limites), persistencia y mocks.
- 10. Completar evidencias:
-    Registra capturas y explicaciones en evidencias/EVIDENCIAS_GUIA_PLANTILLA.md.
+ 10. Evidencias:
+    La guia evidencias/EVIDENCIAS_GUIA_PLANTILLA.md contiene el registro E1-E9 y las capturas verificables E7-E8.
  11. Generar el reporte completo con el diseño ACT-F04:
      Ejecuta python generar_docx_reporte.py. Combina E1-E9 y sus 12 imagenes (7 ilustrativas y 5 capturas reales de E7 y E8) con los logotipos,
      encabezado, pie, márgenes y estilos de la plantilla; conserva los nombres y matrículas

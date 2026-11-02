@@ -29,6 +29,7 @@ IMAGE_PATTERN = re.compile(r"!\[(.*?)\]\((.*?)\)")
 INLINE_PATTERN = re.compile(r"(\*\*.+?\*\*|`.+?`|\*.+?\*)")
 TABLE_SEPARATOR = re.compile(r"\|?[\s:|-]+\|?")
 EXPECTED_IMAGE_COUNT = 12
+REPOSITORY_URL = "https://github.com/jyrnso0/unidad-5"
 
 
 def element_text(element):
@@ -157,11 +158,11 @@ def update_metadata(document):
     hyperlink = activity_cell.paragraphs[2]._p.find(qn("w:hyperlink"))
     if hyperlink is None:
         raise ValueError("La celda de repositorio perdió el vínculo de la plantilla.")
-    target = "https://github.com/"
+    target = REPOSITORY_URL
     text_nodes = hyperlink.xpath(".//w:t")
     if not text_nodes:
         raise ValueError("El vínculo del repositorio no contiene texto editable.")
-    text_nodes[0].text = "PENDIENTE: URL REAL DEL REPOSITORIO DEL EQUIPO"
+    text_nodes[0].text = "github.com/jyrnso0/unidad-5"
     for text_node in text_nodes[1:]:
         text_node.text = ""
     relationship_id = hyperlink.get(qn("r:id"))

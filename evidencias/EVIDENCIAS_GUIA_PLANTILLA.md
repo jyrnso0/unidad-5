@@ -1,4 +1,4 @@
-> **Nota sobre las imágenes:** Las imágenes que permanecen en esta guía son ilustraciones generadas por código, no capturas verificables de ejecuciones reales. Sustitúyelas por capturas auténticas de tu entorno antes de entregar; en particular, E8 requiere ejecuciones reales del workflow en GitHub Actions.
+> Las figuras E1-E6 ilustran los conceptos y pasos documentados. E7-E8 incluyen capturas auténticas de las ejecuciones de pruebas, cobertura y GitHub Actions.
 
 ### Evidencia E1 · Instalación y Comprobación Inicial
 > **Objetivo:** Preparar y validar un entorno reproducible con Python 3.11+ y dependencias aisladas.
@@ -11,7 +11,7 @@ python -m pip install -r requirements.txt
 python -m pytest -v
 ```
 
-#### Captura de Pantalla:
+#### Representación visual:
 ![E1 - Pytest Inicial](capturas/e1_instalacion_pytest.png)
 
 #### Explicación Técnica (3 líneas):
@@ -46,7 +46,7 @@ def test_regular_no_discount_200():
 | `Order(100, has_debt=True)` | Bloqueo por deuda pendiente | Excepción `ValueError` | Excepción `ValueError` | PASSED |
 | `Order(0)` / `Order(-50)` | Rechazo importe no positivo | Excepción `ValueError` | Excepción `ValueError` | PASSED |
 
-#### Captura de Pantalla:
+#### Representación visual:
 ![E2 - Pruebas Unitarias](capturas/e2_pruebas_unitarias.png)
 
 ---
@@ -65,7 +65,7 @@ def test_cannot_confirm_twice():
 ```
 - **Salida de Pytest:** `FAILED tests/test_order.py::test_cannot_confirm_twice - Failed: DID NOT RAISE <class 'ValueError'>`
 
-![E3 - Fase RED](capturas/e3_tdd_red.png)
+![E3 - Representación de la fase RED](capturas/e3_tdd_red.png)
 
 #### 2. Fase GREEN (Implementación Mínima)
 Líneas añadidas al inicio de `Order.confirm()` en `src/domain.py`:
@@ -75,7 +75,7 @@ if self.status == "CONFIRMED":
 ```
 - **Salida de Pytest:** `PASSED tests/test_order.py::test_cannot_confirm_twice`
 
-![E3 - Fase GREEN](capturas/e3_tdd_green.png)
+![E3 - Representación de la fase GREEN](capturas/e3_tdd_green.png)
 
 #### 3. Fase REFACTOR (Mejora Limpia)
 Se clarificó el mensaje de error y se verificó que toda la suite continúa en verde sin alterar la interfaz externa de la clase.
@@ -103,7 +103,7 @@ def test_repository_save_order_250_commit(session):
     assert saved.status == "CONFIRMED"
 ```
 
-#### Captura de Pantalla:
+#### Representación visual:
 ![E4 - Integración Base de Datos](capturas/e4_repositorio_transacciones.png)
 
 #### Diferencia entre Commit y Rollback:
@@ -129,7 +129,7 @@ def test_payment_rejected_vip_order():
     gateway.charge.assert_called_once_with(170)
 ```
 
-#### Captura de Pantalla:
+#### Representación visual:
 ![E5 - Mocks Servicio](capturas/e5_mocks_pasarela.png)
 
 #### Propuesta Arquitectónica para Resolver la Inconsistencia:
@@ -169,7 +169,7 @@ def test_owner_cannot_cancel_at_exactly_24_hours():
 | Cliente Regular | Sí | `NEW` | 25 horas (> 24h) | **DENEGADO** | Expiró la ventana temporal permitida |
 | Cliente Regular | No (Tercero) | `NEW` | 2 horas | **DENEGADO** | Prohibido cancelar pedidos ajenos |
 
-#### Captura de Pantalla:
+#### Representación visual:
 ![E6 - Autorización](capturas/e6_seguridad_autorizacion.png)
 
 ---
@@ -288,7 +288,7 @@ def test_cp12_mock_notificacion_confirma_descuento_volumen():
 - [x] ¿Demostré que el mock no genera un cargo real ni llamada externa?
 - [x] ¿Comprobé permisos y límites temporales estrictos (< 24h)?
 - [x] ¿Mi cobertura alcanza ≥ 80% sin ocultar módulos del proyecto?
-- [ ] ¿Mi pipeline se ejecutó en GitHub Actions y detectó un fallo controlado?
+- [x] ¿Mi pipeline se ejecutó en GitHub Actions y detectó un fallo controlado?
 - [x] ¿Mis casos del PIA representan reglas de negocio aprobadas de la empresa?
 
 ---
