@@ -17,7 +17,7 @@ Manual y paquete de trabajo para el desarrollo, prueba automatizada y aseguramie
 │   └── pedidos_muestra.csv      # Fixtures de datos de prueba
 ├── evidencias/
 │   ├── capturas/                # Capturas y reporte HTML de cobertura
-│   └── Reporte_U5.pdf           # Reporte de documentación
+│   └── Reporte_Unidad5.pdf      # Reporte de documentación
 ├── src/
 │   ├── __init__.py
 │   ├── domain.py                # Reglas de negocio de pedidos (Order)
