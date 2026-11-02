@@ -1,5 +1,3 @@
-> Las figuras E1-E6 ilustran los conceptos y pasos documentados. E7-E8 incluyen capturas auténticas de las ejecuciones de pruebas, cobertura y GitHub Actions.
-
 ### Evidencia E1 · Instalación y Comprobación Inicial
 > **Objetivo:** Preparar y validar un entorno reproducible con Python 3.11+ y dependencias aisladas.
 
